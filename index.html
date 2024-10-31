@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Input Data Produk</title> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1 class="h1" align="center">Input Data Produk</h1> 
+        <form id="inputForm"> 
+            <label for="namaProduk">Nama Produk:</label> 
+            <input type="text" id="namaProduk" placeholder="Nama Produk" required> 
+ 
+            <label for="hargaSatuan">Harga Satuan:</label> 
+            <input type="text" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" id="hargaSatuan" min="0" placeholder="Harga Satuan" required> 
+ 
+            <label for="jumlah">Jumlah:</label> 
+            <input type="text" inputmode="decimal" id="jumlah" min="0" placeholder="Jumlah" required> 
+ 
+            <button type="submit" id="showTableButton">Tambah</button> 
+        </form> 
+        <table id="dataTable" class="hidden"> 
+            <thead> 
+                <tr> 
+                    <th>Nama Produk</th> 
+                    <th>Harga</th> 
+                    <th>Jml</th> 
+                    <th>JmlHarga</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <!-- Data akan ditambahkan di sini --> 
+            </tbody> 
+        </table> 
+        <div class="total" id="totalHarga">Total Pembayaran:<br>Rp 0</div> 
+    </div> 
+<script src="script.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11
+"></script>
+</body> 
+</html>
